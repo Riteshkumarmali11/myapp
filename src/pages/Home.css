@@ -1,0 +1,69 @@
+/* Home.css */
+
+.Page {
+  height: 100%;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.Card {
+  width: 100%; /* Adjusted width for better responsiveness */
+  max-width: 1200px;
+  height: 80%;
+  margin: 1rem auto;
+  opacity: 0.9;
+  margin-top: 1rem;
+}
+
+.CardBody {
+  background-color: #eae7ee;
+  padding: 2rem;
+}
+
+.h1 {
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (min-width: 576px) {
+  .Card {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .Card {
+    width: 70%;
+  }
+}
+
+@media (min-width: 992px) {
+  .Card {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Card {
+    width: 50%;
+  }
+}
+
+/* Additional adjustments for small screens */
+@media (max-width: 576px) {
+  .CardBody {
+    padding: 1rem;
+  }
+  
+  .FormLabel {
+    text-align: left;
+  }
+
+  .FormInput {
+    width: 100%;
+  }
+
+  .FormButton {
+    width: 100%;
+  }
+}

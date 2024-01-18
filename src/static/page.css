@@ -1,0 +1,101 @@
+/* .modal-table-container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 1050; /* Set a higher z-index than the modal background */
+    /* background-color: white; /* Set a background color for the table container */
+    /* padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Optional: Add box shadow for better visibility */
+/* }  */ 
+
+
+/* page.css */
+
+/* Add your existing styles here */
+
+/* Custom styles for pagination */
+.pagination-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pagination-btn {
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    color: #007bff;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .pagination-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Active page style */
+  .pagination-btn.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .list{
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 30px ;
+    font-weight: bold;
+  }
+  
+
+  /* For farmer registration */
+
+  /* App.css */
+
+.Page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Card {
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  margin: 3rem auto;
+  opacity: 0.9;
+}
+
+.CardBody {
+  background-color: gray;
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .Card {
+    width: 80%;
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 576px) {
+  .CardBody {
+    padding: 1rem;
+  }
+}
+
+.farmer{
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.row{
+  display: flex;
+  width: 100%;
+}
+.column{
+  width: 50%;
+}
