@@ -3,7 +3,7 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import Layout from '../component/Layout';
 import Navbar from '../component/Navbar';
 import '../static/page.css';
-
+//hiii  compcare
 const FarmerRegistration = () => {
   const [formData, setFormData] = useState({
     // ... your existing state properties
