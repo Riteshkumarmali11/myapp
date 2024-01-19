@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Button, Form, Container, Row, Col } from 'react-bootstrap';
-import Navbar from '../component/Navbar';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import Layout from '../component/Layout';
+import Navbar from '../component/Navbar';
 import '../static/page.css';
 
 const FarmerRegistration = () => {
