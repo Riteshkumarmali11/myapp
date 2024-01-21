@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import DatePicker from "react-datepicker";
@@ -6,6 +7,14 @@ import Layout from "../component/Layout";
 import Navbar from "../component/Navbar";
 import "../static/page.css";
 
+=======
+import React, { useState } from 'react';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import Layout from '../component/Layout';
+import Navbar from '../component/Navbar';
+import '../static/page.css';
+//hiii  compcare
+>>>>>>> aa90ede4916642a8e814a6b2b164fe33d56ac076
 const FarmerRegistration = () => {
   const [formData, setFormData] = useState({});
   const [errors, setErrors] = useState({});
