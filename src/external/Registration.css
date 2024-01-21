@@ -1,0 +1,11 @@
+/* Add this to your styles */
+.modal-100w {
+    max-width: 90vw;
+}
+
+/* Optional: To center the modal horizontally on smaller screens */
+@media (max-width: 575.98px) {
+    .modal-90w {
+        margin: 0;
+    }
+}

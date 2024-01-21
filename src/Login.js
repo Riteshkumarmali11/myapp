@@ -3,14 +3,18 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { faEye, faEyeSlash, faLock } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
     const [loading, setLoading] = useState(false);
     const [user, setUser] = useState('');
     const navigate = useNavigate();
+    //const local=useRef();
 
     const handleLogin = async () => {
         try {
@@ -24,18 +28,19 @@ const Login = () => {
             });
 
             if (response.ok) {
-                setUser('exampleUser');
+                setUser('user-info');
                 const data = await response.json();
                 console.log('Login successful:', data);
-                console.log(setUser);
-
+                console.log("Success setuser", setUser);
+                localStorage.setItem('token', data.token);
+                localStorage.setItem('user', data.user);
                 // Store the token in a cookie
                 document.cookie = `token=${data.token}; path=/`;
                 // alert(document.cookie); //for alert token key
                 toast.success('Login successful');
                 alert(document.cookie);
                 // Redirect or perform other actions on successful login
-                navigate(`/navbar/${user}`)
+                navigate(`/navbar1/${user}`)
             } else {
                 console.error('Login failed:', response.statusText);
                 // Handle login error (show error message, etc.)
@@ -70,25 +75,46 @@ const Login = () => {
                                     className="block font-semibold text-gray-700 mb-2" >
                                     Username
                                 </label>
-                                <input type="text" name='email' value={email} onChange={(e) => setEmail(e.target.value)}
-                                    className="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    placeholder="Enter username"
-                                    required
-                                />
+                                <div className='input-icon'>
+                                    <input type="text" name='email' value={email} onChange={(e) => setEmail(e.target.value)}
+                                        className="back shadow-md rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        placeholder="Enter username"
+                                        required
+                                    />
+                                </div>
                             </div>
-                            <div className="mb-4">
+                            <div className="mb-4 relative">
                                 <label className="block font-semibold text-gray-700 mb-2">
                                     Password
                                 </label>
-                                <input type="password" name='password'
-                                    value={password} onChange={(e) => setPassword(e.target.value)}
-                                    className="border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                                    placeholder="Enter your password"
-                                    required
-                                />
-                                <a href="#" className="text-gray-600 hover:text-gray-800">
-                                    Forgot your password?
-                                </a>
+                                <div className="input-icon">
+                                    <input
+                                        name="password"
+                                        type={showPassword ? 'text' : 'password'}
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                        className="back shadow-md rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline pl-10 pr-10"
+                                        placeholder="Enter your password"
+                                        required />
+                                    <FontAwesomeIcon
+                                        icon={showPassword ? faEye : faEyeSlash}
+                                        className="eye-icon mb-3"
+                                        onClick={() => setShowPassword(!showPassword)} />
+                                </div>
+                                <div className='row'>
+                                    <div className='column'>
+                                        New Supervisor?
+                                        <a href="/registration" className="text-blue-600 hover:text-blue-800">
+                                            Click Here..!
+                                        </a>
+                                    </div>
+                                    <div className='column text-align:right'>
+                                        Forgot your &nbsp;
+                                        <a href="#" className="text-blue-600 hover:text-red-800 right-0 pass ">
+                                            Password..?
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                             <div className="mb-6">
                                 <button type="submit" onClick={handleLogin}

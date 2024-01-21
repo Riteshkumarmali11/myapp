@@ -1,58 +1,44 @@
-/* .modal-table-container {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    z-index: 1050; /* Set a higher z-index than the modal background */
-    /* background-color: white; /* Set a background color for the table container */
-    /* padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Optional: Add box shadow for better visibility */
-/* }  */ 
-
-
-/* page.css */
-
 /* Add your existing styles here */
 
 /* Custom styles for pagination */
 .pagination-container {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .pagination-btn {
-    margin: 0 5px;
-    padding: 8px 12px;
-    border: 1px solid #ddd;
-    background-color: #f8f9fa;
-    color: #007bff;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .pagination-btn:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  /* Active page style */
-  .pagination-btn.active {
-    background-color: #007bff;
-    color: #fff;
-  }
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .list{
-    text-align: left;
-    margin-bottom: 15px;
-    font-size: 30px ;
-    font-weight: bold;
-  }
-  
+.pagination-btn {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background-color: #f8f9fa;
+  color: #007bff;
+  cursor: pointer;
+  border-radius: 5px;
+}
 
-  /* For farmer registration */
+.pagination-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
 
-  /* App.css */
+/* Active page style */
+.pagination-btn.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.list {
+  text-align: left;
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* For farmer registration */
+
+/* App.css */
 
 .Page {
   height: 100vh;
@@ -76,26 +62,114 @@
 
 @media (min-width: 768px) {
   .Card {
-    width: 80%;
-    max-width: 1000px;
+      width: 80%;
+      max-width: 1000px;
   }
 }
 
 @media (max-width: 576px) {
   .CardBody {
-    padding: 1rem;
+      padding: 1rem;
   }
 }
 
-.farmer{
+.farmer {
   font-size: 26px;
-  font-weight: bold;
+  font-weight: bold ;
+  font-style: unset;
 }
 
-.row{
-  display: flex;
+.bold-hr {
+  border-top: 5px solid rgb(245, 130, 130);
+  /* You can adjust the thickness and color as needed */
+  margin-top: 20px;
+  /* Adjust the margin as needed */
+}
+
+.Birthdate {
+  width: 50rem;
+}
+
+/* Add the following style to make the birth date input responsive */
+.Birthdate .react-datepicker-wrapper,
+.Birthdate .react-datepicker__input-container {
   width: 100%;
 }
-.column{
-  width: 50%;
+
+/* Navbar button */
+/* Style for the dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0px;
+  background-color: #c0bcbc;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Style for the dropdown button */
+.btn {
+  /* Your existing button styles */
+  cursor: pointer;
+}
+
+/* Style for the dropdown items */
+button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+/* Style for the dropdown items on hover */
+button:hover {
+  background-color: #f5c2c2;
+}
+
+.arrow-icon {
+  /* border: 2px solid #1b1a1a; //Adjust the color and size of the left border */
+  padding: 5px;
+  right: 0px;
+
+}
+
+.input-icon{
+  background-color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  right: 20px;
+  border:1px black;
+}
+
+.input-icon input{
+  width: 100%;
+  padding: 10px 0;
+  border: 1px;
+  outline: 0;
+  color: #555;
+}
+
+.eye-icon{
+  width: 35px;
+  cursor: pointer;
+}
+.back{
+  background-color: #fff;
+  box-shadow: 5px #0a0a0a;
+}
+
+.Heading{
+  text-align: center;
+  text-shadow: #0a0a0a 10px;
+  font-weight: bold;
 }
